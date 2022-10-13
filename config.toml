@@ -1,0 +1,21 @@
+[database]
+    [[database.game]]
+        link = "mysql:root:tablegame@tcp(192.168.11.48:3306)/game"
+        charset = "utf8mb4"
+        debug = false
+        maxIdle = 50
+        maxOpen = 100
+        maxLifetime = 30
+
+# GF-CLI工具配置
+[gfcli]
+    # 自定义DAO生成配置(默认是读取database配置)
+    [[gfcli.gen.dao]]
+        link   = "mysql:root:tablegame@tcp(192.168.11.48:3306)/game"
+        jsonCase = "Snake"
+	[[gfcli.gen.pbentity]]
+		link    = "mysql:root:tablegame@tcp(192.168.11.48:3306)/game"
+		path    = "proto"
+		jsonCase = "Snake"
+		package = "pb"
+		option 	= "option go_package = \"../app/pb\";"

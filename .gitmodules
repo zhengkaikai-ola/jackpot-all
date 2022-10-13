@@ -1,0 +1,3 @@
+[submodule "jackpot-ts"]
+	path = jackpot-ts
+	url = git@github.com:olaola-chat/jackpot-ts.git
